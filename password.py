@@ -19,7 +19,6 @@ def upper_cased_list(array):
 def set_password_length():
     if len(argv) > 1:
         return int(argv[1])
-        # print argv
     else:
         return 30
         
@@ -41,10 +40,8 @@ def generate_pass(length=set_password_length()):
         a_char = pick_char() 
 
         if a_char in char_set[key]:
-            print password
             if not duplicate_found(password):
                 password.append(a_char)
-                print a_char
             else:
                 password.pop()
 
