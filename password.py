@@ -41,10 +41,8 @@ def generate_pass(length=set_password_length()):
         a_char = pick_char() 
 
         if a_char in char_set[key]:
-            print password
             if not duplicate_found(password):
                 password.append(a_char)
-                print a_char
             else:
                 password.pop()
 
