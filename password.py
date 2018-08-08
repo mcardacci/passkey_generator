@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from os import urandom
 from random import choice, shuffle
 import pdb
@@ -7,11 +9,11 @@ from sys import argv
 char_set = {'small': 'abcdefghijklmnopqrstuvwxyz',
              'nums': '0123456789',
              'big': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-             'special': '^!\$%&/()=?{[]}+~#-_.:,;<>|\\'
+             'special': ' ^!\$%&/()=?{[]}+~#-_.:,;<>|\\'
             }
 
 def pick_char():
-    return choice(string.punctuation + string.ascii_letters + string.digits) 
+    return choice(string.punctuation + string.ascii_letters + string.digits + ' ') 
 
 def upper_cased_list(array):
     return [char.upper() for char in array]
